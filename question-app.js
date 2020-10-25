@@ -7,7 +7,7 @@ var t;
  function iniciarQuiz(){
  
     questionApp();
-     t=5;
+     t=50;
      setInterval(function(){
          if(t <= 0)
          {
