@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the "Try it" button to create a BUTTON element with a "Click me" text.</p>
+
+<button onclick="iniciarQuis()">Iniciar Quis</button>
+<button onclick="interval()">Interval</button>
+<button onclick="timeout()">Timeout</button>
+<div id="testdiv"></div>
+
+<script>
+var t;
+function iniciarQuis(){
+    t=10;
+    setInterval(function(){
+        if(t == 0)
+        {
+            window.location.replace("score.html");    
+        }document.getElementById("testdiv").innerHTML=t--;
+    },1000,"JavaScript");
+    
+
+}
+function timeout(){
+    setTimeout(function(){
+        document.getElementById("testdiv").innerHTML="Pasaron 2 segundos antes de que pudieras ver esto.";
+    },2000,"JavaScript");
+}
+</script>
+
+</body>
+</html>

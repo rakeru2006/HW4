@@ -1,6 +1,30 @@
 
-  function questionApp() {
-    var score = 0;
+  
+var t;
+   var score;
+
+
+ function iniciarQuiz(){
+ 
+    questionApp();
+     t=5;
+     setInterval(function(){
+         if(t <= 0)
+         {
+           
+             document.getElementById("wrapper").innerHTML="Your final score is " + score;   
+             validateForm();
+         }
+         document.getElementById("testdiv").innerHTML=t--;
+     },1000,"JavaScript");
+     
+ 
+ }
+ 
+ 
+ 
+ function questionApp() {
+    score = 0;
     var currentQuestion = 1;
     var questionCount = Questions.question.length;
     var wrapper = document.getElementById("wrapper");
@@ -9,12 +33,16 @@
     start.setAttribute("disabled","disabled");
     
     function checkAnswer(question,userAnswer,button) {
+    
       var answerSplit = userAnswer.split("");
       var answerNumber = answerSplit[answerSplit.length-1];
       var correctAnswer = question.correct;
       if(answerNumber == correctAnswer) {
         score++;
       } 
+      else {
+        t =t-10;
+      }
       
       button.setAttribute("disabled","disabled");
               
@@ -95,3 +123,22 @@
     
     
   }
+
+
+  function validateForm() {
+   
+   
+        var x = document.getElementById("myDIV");
+       
+         x.style.display = "block";
+    
+       
+
+  }
+
+ function  saveScore()
+{
+    namUser = document.getElementById("id1").value;
+alert ("User"+ namUser +"score" + score);
+
+}
