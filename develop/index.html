@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  
+  
+  <title>QuizGame</title>
+</head>
+<style>
+    h1 {
+    font-size: 40px;
+     
+}
+#highscores {
+    font-size: 30px;
+    text-align: left;
+    color: blue;
+    padding: 20px 10px 20px 10px;
+    width: 50%;
+}
+
+#timer {
+    font-size: 30px;
+    text-align: right;
+    color: blue;
+    padding: 20px 10px 20px 10px;
+    width: 50%;
+}
+
+
+
+#results {
+    font-size: 30px;
+}
+
+.container {
+    text-align: center;
+}
+
+.button-answer, #start, #play-again, #sub-btn, #reset-score {
+    background-color: blue;
+    border-radius: 12px; 
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.question, #quiz {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px 30px 20px 30px;
+    
+}
+ ol {
+     text-align: left;
+     width: 50%;
+     margin: 0 auto;
+ }
+
+ .link-highscore:hover {
+     cursor: pointer;
+ }
+</style>
+
+<body>
+
+    <div class="card text-center text-prime bg-info ">
+        <div class="card-header ">
+            <div class="container">
+                <div class="row">
+                    <div id="highscores"><span class="link-highscore">High Scores</span></div>
+                    <div id="timer" > Time: 120</div>
+                </div>
+            </div>
+          <h1>QUESTION GAME </h1>
+        </div>
+
+         <!--Image -->
+
+      
+
+         <div class="card bg-dark text-white " style="max-width: 20rem;">
+            <img class="card-img" src="aztecas.jpg" alt="Card image">
+            <div class="card-img-overlay">
+           
+            </div>
+          </div>
+
+        <!--Modal to help -->
+
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
+    Click to Reed in case of help 
+  </button>
+<!--Modal-->
+  
+
+ 
+  <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title  </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" >
+         
+            <h5>¿Quiénes eran los aztecas?</h5>
+            Los aztecas, también llamados mexicas, fueron una civilización que existió entre los años 1325 y 1521, ubicada en la región actual de México, zona central y sur de América central.
+            
+            Esta civilización se desarrolló a lo largo de casi 200 años y ha influenciado sobremanera en el desarrollo de culturas posteriores.
+            
+            La civilización azteca llegó a su fin luego de que Hernán Cortés desembarcara en este territorio, en 1521, y lograra su conquista, proceso conocido como la conquista de México.
+            
+            <h5>Ubicación de la cultura azteca</h5>
+            La civilización azteca se ubicó en la zona central Mesoamérica, en el centro del Valle de México. Dicha civilización se encontraba en lo que hoy conocemos como México, Veracruz, Puebla, Oaxaca, Guerrero y parte de Guatemala.
+            
+            Para el año 1521, lograron tener más de 300.000 km² y una población de casi 7 millones de habitantes.
+            
+            <h5>Características de los aztecas</h5>
+            Los aztecas se caracterizan por los siguientes aspectos:
+            
+            Se ubicaban en el actual México y fueron los últimos en llegar al pueblo de Valle de México.
+            Tenían sus propias creencias y divinidades, a raíz de las cuales practicaban el canibalismo y realizaban sacrificios humanos.
+            Su forma de gobierno era una monarquía autoritaria.
+            Su economía se basaba en el cobro de tributo, el comercio y la agricultura.
+            Contaban con un gobernante supremo, llamado Huey Tlatoani.
+            Su idioma principal era el náhuatl.
+            Fue una de las primeras culturas que fundó escuelas, incluida una para mujeres.
+            Religión de la cultura azteca
+            Como la mayoría de las culturas mexicanas, los aztecas eran politeístas, es decir, rendían servicio y adoraban a varios de dioses.
+            
+            Su religión tenía como particularidad la utilización de sacrificios humanos y la práctica del canibalismo.
+
+            
+            <h5>Dioses aztecas</h5>
+            La cultura azteca adoraba diferentes divinidades a las que ofrecía sacrificios y ofrendas. Los dioses aztecas más reconocidos son:
+            
+
+            <ul>
+            <li>Quetzalcóatl	Dios principal </li>
+            <li>Tezcatlipoca	Señor de cielo y de la tierra</li>
+            <li>Tláloc	Dios de la lluvia</li>
+            <li> Huitzilopochtli	Dios de la guerra y el sol</li>
+            <li> Chicomecoatl	Diosa de la vegetación y fertilidad</li>
+            <li>Cintéotl	Dios del maíz y de las bebidas</li>
+            <li>Xolotl	Dios del ocaso</li>
+            <li>Tlazoltéotl	Diosa de la lujuria</li>
+            <li>Mictlantecuhtli	Dios del inframundo y los muertos</li>
+            </ul>
+           <h5>Economía de la cultura azteca</h5>
+            La economía azteca se basaba principalmente en la agricultura, a través de la cual cultivaban principalmente ají, frijol y maíz. También cazaban pescado, basalto y aves acuáticas, que utilizaban para el comercio.
+            
+            Como medio de pago, los aztecas utilizaban el cacao como moneda y herramienta de comercio. 
+            
+            Además, implementaban el cobro de tributos a esclavos, campesinos por el trabajo de tierras y a los pueblos sometidos bajo su dominio.
+        
+            
+            <h5>Organización social y política</h5>
+            Organización social
+            Los aztecas se organizaban en comunidades llamadas calpullis, «casas de gran tamaño», las cuales estaban socialmente estructuradas de la siguiente manera:
+            
+            Estructura social de la cultura azteca
+            Pirámide social de la cultura azteca.
+            <lu>
+            <li>Tlatoani: emperador y rey.</li>
+            <li>Cihuacóatl: consejero principal del rey.</li>
+            <li>Tlatocan: consejo supremo en el que participaban las máximas autoridades de la comunidad, delegado por el rey.</li>
+            <li>Pipiltin: nobles y sacerdotes.</li>
+            <li>Pochtecas: comerciantes y mercaderes del pueblo.</li>
+            <li>Macehualtin: agricultores y artesanos.</li>
+            <li>Tlacotin: aquellos esclavos por delito o deudas, y los Tlatlacotin, prisioneros, desterrados y condenados quienes conformaban la clase social más baja.</li>
+            </lu>
+           
+            <h5>Arquitectura de la cultura azteca</h5>
+            La arquitectura azteca comprende una parte esencial para conocer su cultura, ya que allí es donde se ven reflejados sus valores.
+            
+            Su arquitectura era monumental, reflejaba poder, tenía un gran lazo con la religión y consistía, principalmente, en edificaciones simétricas que denotaban orden. 
+            
+            Los aztecas innovaron la arquitectura al utilizar nuevos materiales y estilos. Su forma de edificar se caracterizaba por el ingenio y la adaptación, por lo cual contaban con lugares completamente artísticos, cómodos y amplios que, además, portaban un importante significado para su cultura y religión.
+            
+            
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ 
+
+        <div class="card-body">
+          <h4 class="card-title">Instuctions:</h4>
+          <p class="card-text">
+              
+            <div class="container"> 
+        
+                <div id="quiz"><p>
+                    <ol>
+                    <li>Answer 5 questions correctly.</li>
+                    <li> You have 2 minuts to anser</li>
+                    <li> Each wrong answer will cost you 15 seconds.</li> 
+                    <li> Your score is afected with the time remaining.</li>
+                    </ol>
+                
+                </p>
+                </div>
+                <div id="results"></div>
+                <br>    
+                <button id="start" class="btn ">Start Game</button>
+            </div>
+            
+        
+        
+            
+        </div>
+        <div class="card-footer text-muted">
+        Thank to my teacher Diana y Fer 
+
+        
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="./script.js"></script></script>
+
+</body>
+
+</html>

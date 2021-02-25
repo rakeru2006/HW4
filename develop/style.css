@@ -1,0 +1,55 @@
+h1 {
+    font-size: 40px;
+     
+}
+#highscores {
+    font-size: 30px;
+    text-align: left;
+    color: blue;
+    padding: 20px 10px 20px 10px;
+    width: 50%;
+}
+
+#timer {
+    font-size: 30px;
+    text-align: right;
+    color: blue;
+    padding: 20px 10px 20px 10px;
+    width: 50%;
+}
+
+
+
+#results {
+    font-size: 30px;
+}
+
+.container {
+    text-align: center;
+}
+
+.button-answer, #start, #play-again, #sub-btn, #reset-score {
+    background-color: blue;
+    border-radius: 12px; 
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.question, #quiz {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px 30px 20px 30px;
+    
+}
+ ol {
+     text-align: left;
+     width: 50%;
+     margin: 0 auto;
+ }
+
+ .link-highscore:hover {
+     cursor: pointer;
+ }
